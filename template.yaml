@@ -39,10 +39,12 @@ Parameters:
   Repository:
     Type: String
     Description: GitHub Repository URL
+    Default: https://github.com/jifengshao88/lambda-refarch-webapp.git
   OauthToken:
     Type: String
     Description: GitHub Repository URL
     NoEcho: true
+    Default: 9fee8d63c400ba60a1b19bccf3ce498d7022799f
 
 Resources:
 

@@ -13,7 +13,6 @@ export API_BASE_URL=`aws cloudformation describe-stacks --stack-name $STACK_NAME
 export STAGE_NAME_PARAM=`aws cloudformation describe-stacks --stack-name $STACK_NAME --query "Stacks[0].Parameters[?ParameterKey=='StageNameParam'].ParameterValue" --output text`
 export COGNITO_HOSTED_DOMAIN=`aws cloudformation describe-stacks --stack-name $STACK_NAME --query "Stacks[0].Outputs[?OutputKey=='CognitoDomainName'].OutputValue" --output text`
 export REDIRECT_URL=`aws cloudformation describe-stacks --stack-name $STACK_NAME --query "Stacks[0].Outputs[?OutputKey=='AmplifyURL'].OutputValue" --output text`
-
 cp www/src/config.default.js www/src/config.js
 if [[ "$OSTYPE" == "darwin"* ]]; then
   sed -i '' -e 's/AWS_COGNITO_REGION/'"$AWS_COGNITO_REGION"'/g' www/src/config.js
