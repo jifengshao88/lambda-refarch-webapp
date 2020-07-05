@@ -44,7 +44,7 @@ Parameters:
     Type: String
     Description: GitHub Repository URL
     NoEcho: true
-    Default: 9fee8d63c400ba60a1b19bccf3ce498d7022799f
+    Default: bb2c77ca183dd3f73dfa3e20eacbc410e473141b
 
 Resources:
 
